@@ -20,14 +20,15 @@ make_sh <- function(repo,user=dirname(repo),branch='master'){
   
   else
   echo "Not deploying, since this branch is not %s."
-  fi',branch,user,repo,branch)
+  fi
+',branch,user,repo,branch)
   
 }
 
 #' @export
 use_covrpage <- function(path='.travis',repo,...){
   
-  if(dir.exists(path)){
+  if(!dir.exists(path)){
     dir.create(path,showWarnings = FALSE,recursive = TRUE)
     message('.travis subdirectory created')
   }
@@ -40,4 +41,22 @@ use_covrpage <- function(path='.travis',repo,...){
   
   message("copy 'bash .travis/push.sh' to .travis.yml in 'after_success' block")
   
+}
+
+#' @export
+travis_encrypt <- function(name = 'GITHUB_PAT',
+                           value = Sys.getenv('GITHUB_PAT')){
+  
+  if(!nzchar(system('travis version',intern = TRUE)))
+    stop('install travis before encrypting')
+  
+  if(file.exists('.travis.yml')){
+    
+    system(sprintf('travis encrypt %s = "%s" --add', name, value))
+    
+  }else{
+    
+    message(sprintf('.travis.yml not found in: %s', getwd()))
+    
+  }
 }
