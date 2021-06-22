@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-12 December, 2020 19:50:23
+22 June, 2021 01:38:51
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -44,8 +44,8 @@ Unit Test summary is created using the
 
 | file                                               | n |  time | error | failed | skipped | warning | icon |
 | :------------------------------------------------- | -: | ----: | ----: | -----: | ------: | ------: | :--- |
-| [test-check\_utils.R](testthat/test-check_utils.R) | 5 | 0.104 |     0 |      0 |       1 |       2 | 🔶⚠️  |
-| [test-covrfuns.R](testthat/test-covrfuns.R)        | 6 | 0.061 |     0 |      0 |       0 |       0 |      |
+| [test-check\_utils.R](testthat/test-check_utils.R) | 5 | 0.149 |     0 |      0 |       1 |       2 | 🔶⚠️  |
+| [test-covrfuns.R](testthat/test-covrfuns.R)        | 6 | 0.104 |     0 |      0 |       0 |       0 |      |
 
 <details open>
 
@@ -53,15 +53,15 @@ Unit Test summary is created using the
 
 | file                                                   | context                    | test                           | status  | n |  time | icon |
 | :----------------------------------------------------- | :------------------------- | :----------------------------- | :------ | -: | ----: | :--- |
-| [test-check\_utils.R](testthat/test-check_utils.R#L4)  | check for tests            | tests are detected             | PASS    | 1 | 0.021 |      |
-| [test-check\_utils.R](testthat/test-check_utils.R#L12) | check for packages         | packages are detected          | SKIPPED | 1 | 0.021 | 🔶    |
-| [test-check\_utils.R](testthat/test-check_utils.R#L23) | use covrpage               | test use\_covrpage             | WARNING | 3 | 0.062 | ⚠️   |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L5)         | check summary covr         | covr\_summary: standard input  | PASS    | 1 | 0.022 |      |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L9_L11)     | check summary covr         | covr\_summary: empty input     | PASS    | 1 | 0.007 |      |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L19)        | check summary output types | with data: short               | PASS    | 1 | 0.020 |      |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L23)        | check summary output types | with data: long                | PASS    | 1 | 0.007 |      |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L27)        | check summary output types | with data: no data             | PASS    | 1 | 0.002 |      |
-| [test-covrfuns.R](testthat/test-covrfuns.R#L35)        | check covr to df           | covr object to df: empty input | PASS    | 1 | 0.003 |      |
+| [test-check\_utils.R](testthat/test-check_utils.R#L4)  | check for tests            | tests are detected             | PASS    | 1 | 0.033 |      |
+| [test-check\_utils.R](testthat/test-check_utils.R#L12) | check for packages         | packages are detected          | SKIPPED | 1 | 0.016 | 🔶    |
+| [test-check\_utils.R](testthat/test-check_utils.R#L23) | use covrpage               | test use\_covrpage             | WARNING | 3 | 0.100 | ⚠️   |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L5)         | check summary covr         | covr\_summary: standard input  | PASS    | 1 | 0.035 |      |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L9_L11)     | check summary covr         | covr\_summary: empty input     | PASS    | 1 | 0.010 |      |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L19)        | check summary output types | with data: short               | PASS    | 1 | 0.043 |      |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L23)        | check summary output types | with data: long                | PASS    | 1 | 0.009 |      |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L27)        | check summary output types | with data: no data             | PASS    | 1 | 0.003 |      |
+| [test-covrfuns.R](testthat/test-covrfuns.R#L35)        | check covr to df           | covr object to df: empty input | PASS    | 1 | 0.004 |      |
 
 | Failed | Warning | Skipped |
 | :----- | :------ | :------ |
@@ -75,7 +75,7 @@ Unit Test summary is created using the
 
 | Field    | Value                             |
 | :------- | :-------------------------------- |
-| Version  | R version 4.0.3 (2020-10-10)      |
+| Version  | R version 4.0.5 (2021-03-31)      |
 | Platform | x86\_64-apple-darwin17.0 (64-bit) |
 | Running  | macOS Catalina 10.15.7            |
 | Language | en\_US                            |
@@ -83,7 +83,7 @@ Unit Test summary is created using the
 
 | Package  | Version |
 | :------- | :------ |
-| testthat | 3.0.0   |
+| testthat | 3.0.3   |
 | covr     | 3.3.2   |
 | covrpage | 0.1     |
 
